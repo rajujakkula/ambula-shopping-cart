@@ -56,9 +56,9 @@ const Products = () => {
   const ShowProducts = () => {
     return (
       <>
-        <div className="buttons d-flex justify-content-center mb-3 ">
+        <div className="buttons d-flex justify-content-center mb-3 overflow-auto scrollbar  ">
           <button
-            className="btn btn-outline-dark"
+            className="btn btn-outline-dark ms-5"
             onClick={() => setFilter(data)}
           >
             All
@@ -98,13 +98,14 @@ const Products = () => {
         </div>
         {filter.map((products) => {
           return (
-            <div className="col-md-3 mb-4" key={products.id}>
-              <div className="card h-100 text-center  p-4">
+            <div className="col-md-3 mb-4 overflow-hidden " key={products.id}>
+              <div className="card h-100 text-center p-4">
                 <img
                   src={products.image}
                   className="card-img-top"
                   alt={products.title}
                   height="250px"
+                  
                 />
                 <div className="card-body">
                   <h5 className="card-title mb-0">
