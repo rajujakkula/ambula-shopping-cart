@@ -50,18 +50,13 @@ const Navbar = () => {
             <NavLink to="register" className="btn btn-outline-dark m-2">
               <i className="fa fa-user-plus"></i> Register
             </NavLink>
-            {/* <NavLink to="cart" className="btn btn-outline-dark ">
-                <i className="fa fa-shopping-cart me-1"></i>Cart (
-                {state.length > 0 ? state.length : 0})
-              </NavLink> */}
             <NavLink
               to="cart"
               className="btn btn-outline-dark position-relative"
-            >
+            ><i className="fa fa-shopping-cart me-1"></i>
               Cart
               <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                 {state.length > 0 ? state.length : 0}
-                <span className="visually-hidden">unread messages</span>
               </span>
             </NavLink>
           </div>
